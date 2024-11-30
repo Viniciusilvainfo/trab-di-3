@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs Vinícius</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>APIs do Vinícius</h1>
+    </nav>
+
+    <div class="container">
+        <h2>Bem-vindo às APIs do Vinícius!</h2>
+            <p>Nesta página, você encontrará informações sobre as APIs disponíveis. Você poderá interagir com elas digitando os parâmetros necessários nos campos abaixo.</p>
+            
+            <h3>Como usar:</h3>
+            <ul>
+                <li>Digite os parâmetros necessários nos campos fornecidos.</li>
+                <li>Pressione o botão "Enviar" para realizar a chamada à API.</li>
+            </ul>
+    </div>
+
+    <div id="container1" class="container">
+        <label for="paises">Selecione um País</label>
+        <select id="paises"></select>
+        <div class="info">
+            Ao selecionar um país você vai obter o nome dele, o nome dele em inglês a sigla e o seu Gentílico
+        </div>
+
+        <button id="paisButton" type="button" onclick="buscarDadosPais();">Enviar</button>
+    </div>
+
+    <div id="conteudo">
+        <h3 id="pais"></h3>
+        <ul id="lista-paises"></ul>
+    </div>
+
+    <div id="container2" class="container">
+        <label for="ddd">Informe um ddd</label>
+        <input type="number" name="ddd" id="ddd" placeholder="digite o ddd aqui" required>
+        <div class="info">
+            Ao informar um ddd válido você vai obter o estado dele e as suas cidades
+        </div>
+
+        <button id="dddButton" type="button" onclick="buscarDados();">Enviar</button>
+    </div>
+
+    <div id="conteudo-ddd">
+        <h3 id="estado"></h3>
+        <ul id="lista-cidades"></ul>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
